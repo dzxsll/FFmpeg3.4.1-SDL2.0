@@ -10,21 +10,29 @@
 extern "C"
 {
 #include "libavdevice/avdevice.h" 
-#include "libavcodec/avcodec.h"  
 #include "libavformat/avformat.h"  
+#include "libavcodec/avcodec.h"  
 #include "libswscale/swscale.h" 
 #include "libavutil/imgutils.h"
+#include "libavutil/time.h"
 #include "SDL/include/SDL.h"
 };
 #endif // WIN32
 
-AVFormatContext *pFormatCtx;
-int				videoindex;
-AVCodecContext	*pCodecCtx;
-AVCodec			*pCodec;
+//For decode the input stream
+AVFormatContext *pIFmtCtx;
+AVCodecContext	*pDecoderCtx;
+AVCodec			*pDecoder;
+//For encode the output stream
+AVFormatContext *pOFmtCtx;
+AVCodecContext	*pEncoderCtx;
+AVCodec			*pEncoder;
+//For get the data and change the format of the data
+int	     		 videoindex;
+AVStream		*video_st;
 AVFrame			*pFrame, *pFrameYUV;
+
 struct SwsContext *img_convert_ctx;
 
 void Open_dshow_device(char *CameraName);
 
-void Get_device_data();
