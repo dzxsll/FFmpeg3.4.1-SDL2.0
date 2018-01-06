@@ -33,6 +33,8 @@ AVStream		*video_st;
 AVFrame			*pFrame, *pFrameYUV;
 
 struct SwsContext *img_convert_ctx;
+struct SwsContext *img_convert_ctx1;
 
 void Open_dshow_device(char *CameraName);
 
+void Dispose();
