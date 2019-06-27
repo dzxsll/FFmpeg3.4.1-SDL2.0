@@ -1,7 +1,7 @@
 # FFmpeg3.4.1-SDL2.0
 C#下win32位的摄像头播放器，参考雷神【雷霄骅】的代码仿写,使用ffmpeg-3.4.1-win32-dev&shared以及SDL2.0。
 
-雷神的资料地址：https://github.com/dzxsll/FFmpeg3.4.1-SDL2.0.git
+雷神的资料地址：https://blog.csdn.net/leixiaohua1020/article/details/15811977
 
 感谢前辈，天妒英才，缅怀。
 
